@@ -1,18 +1,14 @@
 function SubArr(arr) {
-    let maxSum = Number.MIN_VALUE;
-    let curSum = 0;
+    let maxSum = arr[0];
+    let curSum = arr[0];
 
     for (let i = 0; i < arr.length; i++) {
-        curSum += arr[i];
-        maxSum = Math.max(maxSum, curSum);
-
-        if (curSum < 0) {
-            curSum = 0;
-        }
+        curSum = Math.max(arr[i], curSum + arr[i]); // Either start fresh at arr[i] or continue with curSum
+        maxSum = Math.max(maxSum, curSum); // Keep track of the maximum sum encountered
     }
 
     console.log(maxSum);
 }
 
-let arr = [1, 2, 3, 4, 5];
+let arr = [-1, -2, -3, -4, -5];
 SubArr(arr); // Maximum Subarray Sum
