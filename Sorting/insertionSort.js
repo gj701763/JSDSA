@@ -13,6 +13,6 @@ function InsertSort(arr) {
 
 
 
-let arr = [2, 1, 78, 5, 3, 1];
+let arr = [2, 4, 78, 5, 3, 1];
 InsertSort(arr);
 console.log(arr);

@@ -9,8 +9,8 @@ function BubbleSort(arr) {
             }
         }
     }
-}
+} 
 
-let arr = [2, 9, 78, 5, 3, 1];
+let arr = [2, 9, 78, 5, 3, 11];
 BubbleSort(arr);
 console.log(arr);
