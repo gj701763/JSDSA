@@ -1,7 +1,11 @@
 // Euclid's Algorithm base on Greatest Common divisor (GCD)
 
+// Least/lowest Common Multiple(LCM) 
 
-function gcd(a, b) {
+// LCM of (a, b) = ( a * b) / GCD
+
+
+function gcdc(a, b) {
     while(a > 0 && b > 0) {
         if(a > b) {
             a = a % b
@@ -13,5 +17,11 @@ function gcd(a, b) {
     return a
 }
 
-let a = 50, b = 50
-console.log(gcd(a,b))
+function lcm(a, b) {
+    let gcd = gcdc(a,b);
+    return (a * b) / gcd
+}
+
+let a = 20, b = 28
+console.log(lcm(a,b))
+//console.log(gcdc(a,b))
